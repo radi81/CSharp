@@ -1,0 +1,6 @@
+Problem 13. C# and .NET Differences
+
+C# is a programming language, but .NET is a framework. Framework means it contained different applications.
+Some names of the applications are Consule Application,Windows Applications,csharp Web Applications. 
+.NET Framework is supports morethan 20 languages.
+It’s a main difference between .NET and other languages. Like C#,VB,..etc.

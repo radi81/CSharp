@@ -1,0 +1,469 @@
+1. Homework: Streams and Files
+2. This document defines the homework assignments from the "Advanced C#" Course @ Software University. Please submit as homework a single zip / rar / 7z archive holding the solutions (source code) of all below described problems. The solutions should be written in C#.
+3. Problem 1. Odd Lines
+4. Write a program that reads a text file and prints on the console its odd lines. Line numbers starts from 0. Use StreamReader.
+5. Problem 2. Line Numbers
+6. Write a program that reads a text file and inserts line numbers in front of each of its lines. The result should be written to another text file. Use StreamReader in combination with StreamWriter.
+7. Problem 3. Word Count
+8. Write a program that reads a list of words from the file words.txt and finds how many times each of the words is contained in another file text.txt. Matching should be case-insensitive.
+9. Write the results in file results.txt. Sort the words by frequency in descending order. Use StreamReader in combination with StreamWriter.
+10. words.txt
+11. text.txt
+12. result.txt
+13. quick
+14. is
+15. fault
+16. -I was quick to judge him, but it wasn't his fault.
+17. -Is this some kind of joke?! Is it?
+18. -Quick, hide here�It is safer.
+19. is - 3
+20. quick - 2
+21. fault - 1
+22. Problem 4. Copy Binary File
+23. Write a program that copies the contents of a binary file (e.g. image, video, etc.) to another using FileStream. You are not allowed to use the File class or similar helper classes.
+24. Problem 5. Slicing File
+25. Write a program that takes any file and slices it to n parts. Write the following methods:
+26. � Slice(string sourceFile, string destinationDirectory, int parts) - slices the given source file into n parts and saves them in destinationDirectory.
+27. Source File
+28. Destination Directory
+29. parts = 5
+30. 
+31. 
+32. � Assemble(List<string> files, string destinationDirectory) - combines all files into one, in the order they are passed, and saves the result in destinationDirectory.
+33. Source Files
+34. Destination Directory
+35. 
+36. 
+37. 
+38. Use FileStreams. You are not allowed to use the File class or similar helper classes.
+39. Problem 6. Zipping Sliced Files
+40. Modify your previous program to also compress the bytes while slicing parts and decompress them when assembling them back to the original file. Use GzipStream.
+41. Tip: When getting files from directory, make sure you only get files with .gz extension (there might be hidden files).
+42. Source File
+43. Compressed & Sliced
+44. Decompressed & Assembled
+45. parts = 5
+46. 
+47. 
+48. Problem 7. Directory Traversal
+49. Traverse a given directory for all files with the given extension. Search through the first level of the directory only and write information about each found file in report.txt.
+50. The files should be grouped by their extension. Extensions should be ordered by the count of their files (from most to least). If two extensions have equal number of files, order them by name.
+51. Files under an extension should be ordered by their size.
+52. report.txt should be saved on the Desktop. Ensure the desktop path is always valid, regardless of the user.
+53. Input
+54. Directory View
+55. report.txt
+56. ../../
+57. 
+58. .cs
+59. --Mecanismo.cs - 0.994kb
+60. --Program.cs - 1.108kb
+61. --Nashmat.cs - 3.967kb
+62. --Wedding.cs - 23.787kb
+63. --Program - Copy.cs - 35.679kb
+64. --Salimur.cs - 588.657kb
+65. .txt
+66. --backup.txt - 0.028kb
+67. --log.txt - 6.72kb
+68. .asm
+69. --script.asm - 0.028kb
+70. .config
+71. --App.config - 0.187kb
+72. .csproj
+73. --01. Writing-To-Files.csproj - 2.57kb
+74. .js
+75. --controller.js - 1635.143kb
+76. .php
+77. --model.php - 0kb
+78. 
+79. Problem 8. * Full Directory Traversal
+80. Modify your previous program to recursively traverse the sub-directories of the starting directory as well.
+81. Problems for Champions
+82. Problem 9. * Disk
+83. This problem is from the C# Basics Exam (28 April 2014). You can test your solution here.
+84. In geometry, a�disk is the region in a�plane�bounded by a�circle (it also includes the circle itself). Your task is to print a disk on the console by a given radius R in a square field of size N x N (see the examples below).
+85. Input
+86. The input data should be read from the console.
+87. � On the first line of the input you will be given the size of the field N. On the second line of the input you will be given the radius of the disk R.
+88. � The disk�s center is the center point of the field (it will always exist, because N is odd).
+89. The input data will always be valid and in the format described. There is no need to check it explicitly.
+90. Output
+91. The output should be printed on the console. You should print the disk on the console following the examples below.
+92. � Your output must consist of N rows, each containing N characters. Each character represents a point in the field. For every point you must output one of two possible states � dot '.' if the point lies outside of the disk and asterisk '*' if the point lies within the disk.
+93. Hint: In order to check whether a point is inside or outside of a circle, you may calculate the distance from the point to the center of the field by the Pythagorean Theorem (see http://goo.gl/HwqOuU).
+94. Constraints
+95. � The number N is a positive odd integer in the range [3 � 39], inclusive.
+96. � The number R is a positive integer between 1 and N/2 (floor (N/2)), inclusive. This means that the disk will always fit in the field, without crossing its sides.
+97. � Allowed working time for your program: 0.1 seconds.
+98. � Allowed memory: 16 MB.
+99. Examples
+100. Input
+101. Output
+102. 
+103. Input
+104. Output
+105. 
+106. Input
+107. Output
+108. 
+109. Input
+110. Output
+111. 5
+112. 2
+113. ..*..
+114. .***.
+115. *****
+116. .***.
+117. ..*..
+118. 
+119. 9
+120. 3
+121. .........
+122. ....*....
+123. ..*****..
+124. ..*****..
+125. .*******.
+126. ..*****..
+127. ..*****..
+128. ....*....
+129. .........
+130. 
+131. 11
+132. 1
+133. ...........
+134. ...........
+135. ...........
+136. ...........
+137. .....*.....
+138. ....***....
+139. .....*.....
+140. ...........
+141. ...........
+142. ...........
+143. ...........
+144. 
+145. 19
+146. 6
+147. 
+148. ...................
+149. ...................
+150. ...................
+151. .........*.........
+152. ......*******......
+153. .....*********.....
+154. ....***********....
+155. ....***********....
+156. ....***********....
+157. ...*************...
+158. ....***********....
+159. ....***********....
+160. ....***********....
+161. .....*********.....
+162. ......*******......
+163. .........*.........
+164. ...................
+165. ...................
+166. ...................
+167. Problem 10. * Paint Ball
+168. This problem is from the C# Basics Exam (19 December 2014). You can test your solution here.
+169. You are given a painting canvas of size 10 x 10, divided into 100 cells. Initially, the canvas is white (all cells have a value of 1). You shoot black and white paint balls with different sizes at the canvas. White is represented by 1s and black is represented by 0s. You alternate between black and white paint after each shot; the first shot is always with black paint (0s), the second is white (1s), the third is black again and so on. You will be given each shot's impact row and column coordinates as well as the ball's radius. The impact area is a square, its center is the impact cell; all cells in the impact area change values to either 0 or 1, depending on the color of the paint.
+170. After you run out of ammo (when you receive the string "End" from the console) the canvas will be some combination of 1s and 0s. Each row of the canvas represents a binary integer number. Your task is to find the sum of the 10 numbers and print it to the console. An example where a single shot with parameters "4 5 2" was fired is shown below. The impact cell is shaded black, the splashed cells in the impact area are shaded grey.
+171. Input
+172. The input data is read from the console. 
+173. � It consists of a random number of lines. The input ends with the string "End".
+174. � Each line will hold three numbers � the row and column of the cell where the ball lands and the radius of the ball, all separated from each other by a single space.
+175. The input data will always be valid and in the format described. There is no need to check it explicitly.
+176. Output
+177. The output data must be printed on the console.
+178. � On the only output line you must print the sum of the 10 rows of the canvas in decimal format.
+179. Constraints
+180. � The number of shots will be in the range [1�25].
+181. � The rows and columns are integer numbers in the range [0�9].
+182. � The radius of the ball will be an integer between 0 (single cell) and 10 (large splash area damage).
+183. � Time limit: 0.25 seconds. Allowed memory: 16 MB.
+184. Examples
+185. 
+186. �
+187. 9
+188. 8
+189. 7
+190. 6
+191. 5
+192. 4
+193. 3
+194. 2
+195. 1
+196. 0
+197. Number
+198. 0
+199. 1
+200. 1
+201. 1
+202. 1
+203. 1
+204. 1
+205. 1
+206. 1
+207. 1
+208. 1
+209. 1023
+210. 1
+211. 1
+212. 1
+213. 1
+214. 1
+215. 1
+216. 1
+217. 1
+218. 1
+219. 1
+220. 1
+221. 1023
+222. 2
+223. 1
+224. 1
+225. 0
+226. 0
+227. 0
+228. 0
+229. 0
+230. 1
+231. 1
+232. 1
+233. 775
+234. 3
+235. 1
+236. 1
+237. 0
+238. 0
+239. 0
+240. 0
+241. 0
+242. 1
+243. 1
+244. 1
+245. 775
+246. 4
+247. 1
+248. 1
+249. 0
+250. 0
+251. 0
+252. 0
+253. 0
+254. 1
+255. 1
+256. 1
+257. 775
+258. 5
+259. 1
+260. 1
+261. 0
+262. 0
+263. 0
+264. 0
+265. 0
+266. 1
+267. 1
+268. 1
+269. 775
+270. 6
+271. 1
+272. 1
+273. 0
+274. 0
+275. 0
+276. 0
+277. 0
+278. 1
+279. 1
+280. 1
+281. 775
+282. 7
+283. 1
+284. 1
+285. 1
+286. 1
+287. 1
+288. 1
+289. 1
+290. 1
+291. 1
+292. 1
+293. 1023
+294. 8
+295. 1
+296. 1
+297. 1
+298. 1
+299. 1
+300. 1
+301. 1
+302. 1
+303. 1
+304. 1
+305. 1023
+306. 9
+307. 1
+308. 1
+309. 1
+310. 1
+311. 1
+312. 1
+313. 1
+314. 1
+315. 1
+316. 1
+317. 1023
+318. �
+319. �
+320. �
+321. �
+322. �
+323. �
+324. �
+325. �
+326. sum = 
+327. 8990
+328. Input
+329. Output
+330. 4 5 2
+331. End
+332. 8990
+333. 
+334. 
+335. Input
+336. Output
+337. 1 2 5
+338. 5118
+339. 3 3 1
+340. 
+341. 0 6 4
+342. 
+343. 0 0 0
+344. 
+345. 8 9 2
+346. 
+347. 1 7 2
+348. 
+349. End
+350. 
+351. 
+352. Problem 11. * Couples Frequency
+353. This problem is from the Java Basics Exam (26 May 2014). You can test your solution here.
+354. Write a program that reads a sequence of n integers and calculates and prints the frequencies of all couples of two consecutive numbers. For example, for the input sequence { 3 4 2 3 4 2 1 12 2 3 4 }, we have 10 couples (6 distinct), shown on the right with their occurrence counts and frequencies (in percentage).
+355. Couple
+356. Occurrences
+357. Percentage
+358. 3 4
+359. 3 times
+360. 30.00%
+361. 4 2
+362. 2 times
+363. 20.00%
+364. 2 3
+365. 2 times
+366. 20.00%
+367. 2 1
+368. 1 times
+369. 10.00%
+370. 1 12
+371. 1 times
+372. 10.00%
+373. 12 2
+374. 1 times
+375. 10.00%
+376. Input
+377. The input data should be read from the console. At the first line, we have the input sequence of integers, separated by a space.
+378. The input data will always be valid and in the format described. There is no need to check it explicitly.
+379. Output
+380. Print all distinct couples of two consecutive numbers (without duplicates) found in the input sequence (from left to right) along with their frequency of appearance in the input sequence (in percentages, with two decimal digits, with traditional rounding). Use the format: "couple -> percentage" (see the examples below). Beware of formatting!
+381. Constraints
+382. � All input numbers will be integers in the range [-100 000 � 100 000].
+383. � The count of the numbers will be in the range [2..1000].
+384. � Time limit: 0.5 sec. Memory limit: 16 MB.
+385. Examples
+386. Input
+387. 
+388. Input
+389. 
+390. Input
+391. 3 4 2 3 4 2 1 12 2 3 4
+392. 
+393. 5 10 5 10 10 5 5 10 5 10 10 5
+394. 
+395. 10 20 10 10 10
+396. Output
+397. 
+398. Output
+399. 
+400. Output
+401. 3 4 -> 30.00%
+402. 4 2 -> 20.00%
+403. 2 3 -> 20.00%
+404. 2 1 -> 10.00%
+405. 1 12 -> 10.00%
+406. 12 2 -> 10.00%
+407. 
+408. 5 10 -> 36.36%
+409. 10 5 -> 36.36%
+410. 10 10 -> 18.18%
+411. 5 5 -> 9.09%
+412. 
+413. 10 20 -> 25.00%
+414. 20 10 -> 25.00%
+415. 10 10 -> 50.00%
+416. Problem 12. * Labyrinth Dash
+417. This problem is from the Java Basics (11 May 2015). You can test your solution here.
+418. Enough hard problems. Let�s play a game! You will be given the layout of a labyrinth (a two-dimensional array) and a series of moves. Your task is to navigate the labyrinth and print the outcome of each move.
+419. On the first line of input you will be given the number N representing the count of rows of the labyrinth. On each of the next N lines you will receive a string containing the layout of the given row. On the last line of input you will receive a string containing the moves you need to make. Each move will be one of the following symbols: "v" (move down), "^" (move up), "<" (move left) or ">" (move right). The string will not contain any other characters.
+420. The player starts with 3 lives and begins the journey at position (0, 0). When you make a move, there can be several different outcomes: 1) Hit a wall � a wall is represented by the symbols "_" (underscore) and "|" (pipe). Hitting a wall means the player stays in place; in this case you should print on the console �Bumped a wall.� 2) Land on an obstacle � obstacles are the following symbols: "@", "#", "*". If you move to a position containing one of these symbols the player loses a life point and you should print "Ouch! That hurt! Lives left: X" on the console. If the player is left with 0 lives, the game ends and you should print "No lives left! Game Over!" 3) Get a new life � when you land on the symbol "$" the player receives an additional life point. Print "Awesome! Lives left: X" on the console. Additional lives ('$') are removed once the player passes through the cell (i.e. they are replaced with dots). 4) Drop out of the labyrinth � if you land on an empty cell (one containing a space), or outside the boundaries of the array, the game ends and you should print "Fell off a cliff! Game Over!" 5) Land on the symbol "." (dot) � move the player to the new position, nothing else happens; print on the console "Made a move!"
+421. When the game ends (either the player has lost or all moves were made), print "Total moves made: X".
+422. Input
+423. � The input data should be read from the console.
+424. � On the first line of input you will receive the number N � number of rows of the labyrinth.
+425. � On the next N lines you will receive the layout of the labyrinth.
+426. � On the last line you will receive the moves you need to make as a string.
+427. � The input data will always be valid and in the format described. There is no need to check it explicitly.
+428. Output
+429. � The output should be printed on the console.
+430. � For each outcome print the required output as described above.
+431. Constraints
+432. � The number N will be an integer in the range [1 � 15].
+433. � The labyrinth will contain only the symbols � "_", "|", "@", "#", "*", "$", " " (single space), ".".
+434. � The string containing the moves will be comprised of the following symbols only � "v", "^", "<", and ">".
+435. � Allowed working time for your program: 0.5 seconds. Allowed memory: 16 MB.
+436. Examples
+437. Input
+438. Output
+439. Comments
+440. 5
+441. .|
+442. ..|
+443. *.$  .
+444. ###...
+445. ______
+446. >v>>vv>>>^^^<<
+447. Bumped a wall.
+448. Made a move!
+449. Made a move!
+450. Bumped a wall.
+451. Made a move!
+452. Ouch! That hurt! Lives left: 2
+453. Ouch! That hurt! Lives left: 1
+454. Made a move!
+455. Made a move!
+456. Fell off a cliff! Game Over!
+457. Total moves made: 8
+458. Player starts at (0, 0). First move is ">" (right), which takes the player into a wall. Next, he moves down and right. The next move is right again and he hits another wall. He then moves down twice, on the second move he lands on an obstacle ("#") and loses a life point. He then moves right and loses another life. Two moves to the right are followed by a move upwards which takes him out of the labyrinth (empty cell), so the game is over. The total number of moves where the player actually changed position is 7.
+459. 
+460. 
+461. 
+462. 
+463. 
+464. 
+465. 
+466. 
+467. 
+468. 
+469. 

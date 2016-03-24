@@ -1,0 +1,4 @@
+program - 8
+directory - 3
+all - 8
+files - 6
