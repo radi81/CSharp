@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 14 for Windows Desktop
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.GalacticGPS", "Homework6\1.GalacticGPS.csproj", "{56C2240F-992F-46EE-9827-25838E821B9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.FractionCalculator", "2.FractionCalculator\2.FractionCalculator.csproj", "{9EAC285C-730B-43C6-9D32-63D116A1F120}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.GenericList", "3.GenericList\3.GenericList.csproj", "{037C9247-DA6D-40B1-9467-84E95C644BF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56C2240F-992F-46EE-9827-25838E821B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C2240F-992F-46EE-9827-25838E821B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C2240F-992F-46EE-9827-25838E821B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C2240F-992F-46EE-9827-25838E821B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EAC285C-730B-43C6-9D32-63D116A1F120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EAC285C-730B-43C6-9D32-63D116A1F120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EAC285C-730B-43C6-9D32-63D116A1F120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EAC285C-730B-43C6-9D32-63D116A1F120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{037C9247-DA6D-40B1-9467-84E95C644BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037C9247-DA6D-40B1-9467-84E95C644BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037C9247-DA6D-40B1-9467-84E95C644BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037C9247-DA6D-40B1-9467-84E95C644BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
